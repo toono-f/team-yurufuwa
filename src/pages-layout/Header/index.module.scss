@@ -1,0 +1,17 @@
+@use "src/styles/config" as config;
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  height: 60px;
+  @include config.flex($jc: center, $ai: center, $w: nowrap, $d: row);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header_in {
+  width: 100%;
+  @include config.flex($jc: space-between, $ai: center, $w: nowrap, $d: row);
+}

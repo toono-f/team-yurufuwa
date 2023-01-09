@@ -1,0 +1,17 @@
+@use "src/styles/config" as config;
+
+.navi_list {
+  display: flex;
+}
+
+.navi_item {
+  &:not(:last-of-type) {
+    @include config.mq(md) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.navi_link {
+  @include config.hover-opacity;
+}

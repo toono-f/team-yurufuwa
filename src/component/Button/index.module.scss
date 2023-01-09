@@ -1,0 +1,19 @@
+@use "src/styles/config" as config;
+
+.button {
+  @include config.hover-opacity;
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 10px 40px;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}

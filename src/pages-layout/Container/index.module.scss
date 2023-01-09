@@ -1,0 +1,21 @@
+@use "src/styles/config" as config;
+
+.default {
+  width: 100%;
+  padding: 0 20px;
+  @include config.mq(md) {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.narrow {
+  width: 100%;
+  padding: 0 20px;
+  @include config.mq(md) {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "src/styles/config" as config;
+
+.footer {
+  background-color: var(--black);
+  height: 60px;
+  @include config.flex($jc: center, $ai: center, $w: nowrap, $d: row);
+}
+
+.footer_copy {
+  font-size: config.rem(12);
+  color: var(--white);
+}

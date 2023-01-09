@@ -1,0 +1,19 @@
+@use "src/styles/config" as config;
+
+.index {
+  img {
+    height: 300px;
+    @include config.mq(md) {
+      height: 400px;
+    }
+  }
+}
+
+.lower {
+  img {
+    height: 250px;
+    @include config.mq(md) {
+      height: 300px;
+    }
+  }
+}

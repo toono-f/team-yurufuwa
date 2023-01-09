@@ -1,0 +1,28 @@
+@use "src/styles/config" as config;
+
+.list {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 150px;
+  @include config.mq(md) {
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+  }
+}
+
+.item {
+  a {
+    font-size: config.rem(16);
+    @include config.mq(md) {
+      font-size: config.rem(20);
+    }
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    padding: 10px;
+    @include config.hover-opacity;
+    @include config.flex($jc: center, $ai: center, $w: nowrap, $d: row);
+  }
+}
