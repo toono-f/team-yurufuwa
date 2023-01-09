@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:prod": "cross-env NEXT_PUBLIC_ENVIRONMENT=production next build && next export && next-export-optimize-images && next-sitemap --config next-sitemap.config.js",
-    "build:dev": "cross-env NEXT_PUBLIC_ENVIRONMENT=development next build && next export -o out_dev && next-export-optimize-images && next-sitemap --config next-sitemap.config.js",
+    "build:prod": "cross-env NEXT_PUBLIC_ENVIRONMENT=production next build && next export -o out && cross-env NEXT_PUBLIC_ENVIRONMENT=production next-export-optimize-images && next-sitemap --config next-sitemap.config.js",
+    "build:dev": "cross-env NEXT_PUBLIC_ENVIRONMENT=development next build && next export -o out_dev && NEXT_PUBLIC_ENVIRONMENT=development next-export-optimize-images && next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint"
   },
